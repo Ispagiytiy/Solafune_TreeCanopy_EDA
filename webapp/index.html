@@ -1,0 +1,93 @@
+<!doctype html>
+    <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tree Canopy Comparator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">EDA Tree Canopy</p>
+        <h1 class="hero__title">Segmentation Overlay Comparator</h1>
+        <p class="hero__subtitle">
+          Compare all train_image files with metadata-based segmentation overlays.
+        </p>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="panel" aria-label="Filters">
+        <div class="panel__header">
+          <h2>Filters</h2>
+          <p class="panel__hint">Filter by resolution and environment, then set how many images to show.</p>
+        </div>
+        <div class="filters">
+          <div class="field">
+            <label for="search">Search filename</label>
+            <input id="search" type="search" placeholder="10cm_train_5" />
+          </div>
+          <div class="field">
+            <label for="resolution">Resolution (cm)</label>
+            <select id="resolution" multiple></select>
+          </div>
+          <div class="field">
+            <label for="scene">Environment (scene_type)</label>
+            <select id="scene" multiple></select>
+          </div>
+          <div class="field">
+            <label for="count">Display count</label>
+            <select id="count">
+              <option value="6">6</option>
+              <option value="12" selected>12</option>
+              <option value="18">18</option>
+              <option value="24">24</option>
+              <option value="36">36</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Segmentation colors</label>
+            <div class="seg-control">
+              <div class="seg-control__row">
+                <span>Individual</span>
+                <input id="individualColor" type="color" value="#8342C4" />
+              </div>
+            </div>
+            <div class="seg-control">
+              <div class="seg-control__row">
+                <span>Group</span>
+                <input id="groupColor" type="color" value="#126DD6" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <button id="applyFilters">Apply filters</button>
+          <button id="resetFilters" class="ghost">Reset</button>
+        </div>
+        <div class="stats">
+          <span id="resultCount">0 images</span>
+          <span id="pageInfo">Page 1</span>
+        </div>
+        <div class="pagination">
+          <button id="prevPage" class="ghost">Prev</button>
+          <button id="nextPage" class="ghost">Next</button>
+        </div>
+      </section>
+
+      <section class="gallery" aria-live="polite">
+        <div id="cards" class="gallery__grid"></div>
+        <div id="emptyState" class="empty" hidden>
+          <p>No matching images. Adjust your filters.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Overlay uses metadata segmentation polygons; drag the slider to compare.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
