@@ -9,13 +9,13 @@ A lightweight, static web app for exploring tree canopy segmentation results. It
 - Individual/group overlay color controls
 
 ## Directory layout (you provide the data)
-This repository does **not** include imagery or metadata. Prepare the following structure locally:
+This repository does **not** include imagery or metadata. Prepare the following structure locally and provide correct files from Solafune:
 
 ```
 EDA_TreeCanopy/
   scripts/
     prepare_web_assets.py
-  train_images/                       # you provide .tif images
+  train_images/                       # you provide
     10cm_train_5.tif
     ...
   train_images_png/                   # generated from train_images/
@@ -52,25 +52,6 @@ python -m http.server 8000
 5) Open the app:
 ```
 http://localhost:8000/webapp/index.html
-```
-
-## Metadata format (minimum fields)
-The app reads `data.images` from the JSON file and expects each image entry to include:
-
-```json
-{
-  "file_name": "10cm_train_5.tif",
-  "width": 1024,
-  "height": 1024,
-  "cm_resolution": 10,
-  "scene_type": "urban",
-  "annotations": [
-    {
-      "class": "individual",
-      "segmentation": [x1, y1, x2, y2, ...]
-    }
-  ]
-}
 ```
 
 Notes:
