@@ -32,7 +32,7 @@ If you prefer different names or locations, update the constants in `webapp/app.
 
 ## Clone this repo
 ```bash
-git clone https://github.com/<your-org-or-user>/EDA_TreeCanopy.git
+git clone https://github.com/Ispagiytiy/Solafune_TreeCanopy_EDA.git
 cd EDA_TreeCanopy
 ```
 
