@@ -21,7 +21,7 @@ EDA_TreeCanopy/
   train_images_png/                   # generated from train_images/
     10cm_train_5.png
     ...
-  train_annotations_updated_504bcc9e05b54435a9a56a841a3a1cf5.json  # you provide
+  train_annotations_updated/json  # you provide
   webapp/
     index.html
     app.js
@@ -39,7 +39,7 @@ cd Solafune_TreeCanopy_EDA
 ## Quick start
 1) Place your source TIFFs under `train_images/`.
 2) Place your metadata JSON at:
-   `train_annotations_updated_504bcc9e05b54435a9a56a841a3a1cf5.json`
+   `train_annotations_updated.json`
 3) Convert TIFFs to PNGs for the browser:
 ```bash
 python -m pip install pillow
