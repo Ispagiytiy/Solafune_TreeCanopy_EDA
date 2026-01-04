@@ -10,7 +10,7 @@ A lightweight web app to compare original satellite images with segmentation ove
 
 ## Dataset Assumptions
 - `train_images_png/` contains PNG versions of the training images
-- `train_annotations_updated/json` contains segmentation metadata
+- `train_annotations_updated.json` contains segmentation metadata
 - File names in metadata match the images (e.g., `10cm_train_5.tif` -> `10cm_train_5.png`)
 
 ## Setup
@@ -36,7 +36,7 @@ webapp/
   styles.css
   app.js
 train_images_png/
-train_annotations_updated/json
+train_annotations_updated.json
 scripts/prepare_web_assets.py
 ```
 

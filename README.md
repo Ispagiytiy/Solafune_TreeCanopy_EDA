@@ -21,7 +21,7 @@ EDA_TreeCanopy/
   train_images_png/                   # generated from train_images/
     10cm_train_5.png
     ...
-  train_annotations_updated/json  # you provide
+  train_annotations_updated.json  # you provide
   webapp/
     index.html
     app.js

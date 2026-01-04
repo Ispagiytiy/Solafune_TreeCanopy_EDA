@@ -1,4 +1,4 @@
-const METADATA_URL = "../train_annotations_updated/json";
+const METADATA_URL = "../train_annotations_updated.json";
 const IMAGES_BASE = "../train_images_png";
 
 const state = {
